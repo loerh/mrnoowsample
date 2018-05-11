@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		64E841A920A5903E003D3524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841A820A5903E003D3524 /* AppDelegate.swift */; };
-		64E841AB20A5903E003D3524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841AA20A5903E003D3524 /* ViewController.swift */; };
+		64E841AB20A5903E003D3524 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841AA20A5903E003D3524 /* ProductsViewController.swift */; };
 		64E841AE20A5903E003D3524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E841AC20A5903E003D3524 /* Main.storyboard */; };
 		64E841B120A5903E003D3524 /* mrnoow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64E841AF20A5903E003D3524 /* mrnoow.xcdatamodeld */; };
 		64E841B320A5903E003D3524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64E841B220A5903E003D3524 /* Assets.xcassets */; };
 		64E841B620A5903E003D3524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E841B420A5903E003D3524 /* LaunchScreen.storyboard */; };
 		64E841C120A5903E003D3524 /* mrnoowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841C020A5903E003D3524 /* mrnoowTests.swift */; };
 		64E841CC20A5903E003D3524 /* mrnoowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841CB20A5903E003D3524 /* mrnoowUITests.swift */; };
+		64E841DB20A59063003D3524 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841DA20A59063003D3524 /* APIManager.swift */; };
+		64E841E020A592E0003D3524 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E841DE20A592E0003D3524 /* SwiftyJSON.framework */; };
+		64E841E120A592E0003D3524 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E841DF20A592E0003D3524 /* Alamofire.framework */; };
+		64E841E420A59319003D3524 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841E320A59319003D3524 /* Constants.swift */; };
+		64E841E820A59341003D3524 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841E720A59341003D3524 /* Product.swift */; };
+		64E841EA20A595A0003D3524 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841E920A595A0003D3524 /* ProductTableViewCell.swift */; };
+		64E841EE20A62905003D3524 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841ED20A62905003D3524 /* ProductViewModel.swift */; };
+		64E841F020A62981003D3524 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841EF20A62981003D3524 /* DBManager.swift */; };
+		64E841F220A63058003D3524 /* ProductsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841F120A63058003D3524 /* ProductsTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +46,7 @@
 /* Begin PBXFileReference section */
 		64E841A520A5903E003D3524 /* mrnoow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mrnoow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E841A820A5903E003D3524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64E841AA20A5903E003D3524 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64E841AA20A5903E003D3524 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		64E841AD20A5903E003D3524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64E841B020A5903E003D3524 /* mrnoow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mrnoow.xcdatamodel; sourceTree = "<group>"; };
 		64E841B220A5903E003D3524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +58,15 @@
 		64E841C720A5903E003D3524 /* mrnoowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mrnoowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E841CB20A5903E003D3524 /* mrnoowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mrnoowUITests.swift; sourceTree = "<group>"; };
 		64E841CD20A5903E003D3524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E841DA20A59063003D3524 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		64E841DE20A592E0003D3524 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		64E841DF20A592E0003D3524 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		64E841E320A59319003D3524 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		64E841E720A59341003D3524 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		64E841E920A595A0003D3524 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		64E841ED20A62905003D3524 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		64E841EF20A62981003D3524 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		64E841F120A63058003D3524 /* ProductsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E841E020A592E0003D3524 /* SwiftyJSON.framework in Frameworks */,
+				64E841E120A592E0003D3524 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +103,7 @@
 				64E841BF20A5903E003D3524 /* mrnoowTests */,
 				64E841CA20A5903E003D3524 /* mrnoowUITests */,
 				64E841A620A5903E003D3524 /* Products */,
+				64E841DD20A592E0003D3524 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +120,14 @@
 		64E841A720A5903E003D3524 /* mrnoow */ = {
 			isa = PBXGroup;
 			children = (
+				64E841EC20A628EC003D3524 /* ViewModel */,
+				64E841EB20A597D0003D3524 /* Database */,
+				64E841E620A59338003D3524 /* Model */,
+				64E841E520A59333003D3524 /* View */,
+				64E841E220A5930E003D3524 /* Custom */,
+				64E841D920A5905A003D3524 /* API */,
 				64E841A820A5903E003D3524 /* AppDelegate.swift */,
-				64E841AA20A5903E003D3524 /* ViewController.swift */,
+				64E841AA20A5903E003D3524 /* ProductsViewController.swift */,
 				64E841AC20A5903E003D3524 /* Main.storyboard */,
 				64E841B220A5903E003D3524 /* Assets.xcassets */,
 				64E841B420A5903E003D3524 /* LaunchScreen.storyboard */,
@@ -128,6 +155,64 @@
 			path = mrnoowUITests;
 			sourceTree = "<group>";
 		};
+		64E841D920A5905A003D3524 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				64E841DA20A59063003D3524 /* APIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		64E841DD20A592E0003D3524 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64E841DF20A592E0003D3524 /* Alamofire.framework */,
+				64E841DE20A592E0003D3524 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64E841E220A5930E003D3524 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				64E841E320A59319003D3524 /* Constants.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		64E841E520A59333003D3524 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64E841E920A595A0003D3524 /* ProductTableViewCell.swift */,
+				64E841F120A63058003D3524 /* ProductsTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64E841E620A59338003D3524 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64E841E720A59341003D3524 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64E841EB20A597D0003D3524 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				64E841EF20A62981003D3524 /* DBManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		64E841EC20A628EC003D3524 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				64E841ED20A62905003D3524 /* ProductViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +223,7 @@
 				64E841A120A5903E003D3524 /* Sources */,
 				64E841A220A5903E003D3524 /* Frameworks */,
 				64E841A320A5903E003D3524 /* Resources */,
+				64E841DC20A5928C003D3524 /* Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,14 +340,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64E841DC20A5928C003D3524 /* Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			name = "Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64E841A120A5903E003D3524 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64E841AB20A5903E003D3524 /* ViewController.swift in Sources */,
+				64E841E420A59319003D3524 /* Constants.swift in Sources */,
+				64E841F220A63058003D3524 /* ProductsTableView.swift in Sources */,
+				64E841DB20A59063003D3524 /* APIManager.swift in Sources */,
+				64E841EA20A595A0003D3524 /* ProductTableViewCell.swift in Sources */,
+				64E841AB20A5903E003D3524 /* ProductsViewController.swift in Sources */,
+				64E841F020A62981003D3524 /* DBManager.swift in Sources */,
 				64E841B120A5903E003D3524 /* mrnoow.xcdatamodeld in Sources */,
 				64E841A920A5903E003D3524 /* AppDelegate.swift in Sources */,
+				64E841EE20A62905003D3524 /* ProductViewModel.swift in Sources */,
+				64E841E820A59341003D3524 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +548,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7DGCG72AA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = mrnoow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +570,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7DGCG72AA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = mrnoow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
