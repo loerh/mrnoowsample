@@ -24,18 +24,21 @@ class ProductViewModel {
         /// Fetch from API
         APIManager.shared.fetchProducts { (apiProducts) in
             
-            guard let apiProducts = apiProducts else {
-                completion(nil)
-                return
+            DispatchQueue.main.async {
+                
+                guard let apiProducts = apiProducts else {
+                    completion(nil)
+                    return
+                }
+                
+                /// Save to CoreData
+                for apiProduct in apiProducts {
+                    DBManager.shared.saveProduct(with: apiProduct)
+                }
+                
+                /// Complete
+                completion(apiProducts)
             }
-            
-            /// Save to CoreData
-            for apiProduct in apiProducts {
-                DBManager.shared.saveProduct(with: apiProduct)
-            }
-            
-            /// Complete
-            completion(apiProducts)
         }
     }
 }

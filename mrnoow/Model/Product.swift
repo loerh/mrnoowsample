@@ -19,7 +19,7 @@ struct Product {
     //MARK: Properties
     
     /// ID for that product
-    let id: Int
+    let id: String
     
     /// The name of that product
     let name: String
@@ -28,12 +28,12 @@ struct Product {
     let productDescription: String
     
     /// The price of that product
-    let price: CGFloat
+    let price: Float
     
     /**
      A basic initialiser
      */
-    init(id: Int, name: String, productDescription: String, price: CGFloat) {
+    init(id: String, name: String, productDescription: String, price: Float) {
         self.id = id
         self.name = name
         self.productDescription = productDescription
@@ -49,7 +49,7 @@ struct Product {
      */
     static func parseJSON(with json: JSON) -> Product? {
         
-        guard let id = json[ProductKey.id.rawValue].int else {
+        guard let id = json[ProductKey.id.rawValue].string else {
             print("Could not find \(ProductKey.id.rawValue) key in JSON.")
             return nil
         }
@@ -59,7 +59,7 @@ struct Product {
             return nil
         }
         
-        guard let productDescription = json[ProductKey.id.rawValue].string else {
+        guard let productDescription = json[ProductKey.description.rawValue].string else {
             print("Could not find \(ProductKey.description.rawValue) key in JSON.")
             return nil
         }
@@ -69,7 +69,7 @@ struct Product {
             return nil
         }
         
-        return Product(id: id, name: name, productDescription: productDescription, price: CGFloat(price))
+        return Product(id: id, name: name, productDescription: productDescription, price: price)
     }
     
     /**
@@ -78,15 +78,15 @@ struct Product {
     init?(managedObject: NSManagedObject) {
         
         /// Find the feed fields
-        guard let id = managedObject.value(forKey: ProductDBKey.id.rawValue) as? Int,
+        guard let id = managedObject.value(forKey: ProductDBKey.id.rawValue) as? String,
             let name = managedObject.value(forKey: ProductDBKey.name.rawValue) as? String,
             let productDescription = managedObject.value(forKey: ProductDBKey.description.rawValue) as? String,
-            let price = managedObject.value(forKey: ProductDBKey.price.rawValue) as? Double else {
+            let price = managedObject.value(forKey: ProductDBKey.price.rawValue) as? Float else {
                 return nil
         }
         
         /// Initialise
-        self.init(id: id, name: name, productDescription: productDescription, price: CGFloat(price))
+        self.init(id: id, name: name, productDescription: productDescription, price: price)
     }
 }
 
