@@ -24,7 +24,6 @@
 		64E841CC20A5903E003D3524 /* mrnoowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841CB20A5903E003D3524 /* mrnoowUITests.swift */; };
 		64E841DB20A59063003D3524 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841DA20A59063003D3524 /* APIManager.swift */; };
 		64E841E020A592E0003D3524 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E841DE20A592E0003D3524 /* SwiftyJSON.framework */; };
-		64E841E120A592E0003D3524 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E841DF20A592E0003D3524 /* Alamofire.framework */; };
 		64E841E420A59319003D3524 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841E320A59319003D3524 /* Constants.swift */; };
 		64E841E820A59341003D3524 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841E720A59341003D3524 /* Product.swift */; };
 		64E841EA20A595A0003D3524 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841E920A595A0003D3524 /* ProductTableViewCell.swift */; };
@@ -92,7 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				64E841E020A592E0003D3524 /* SwiftyJSON.framework in Frameworks */,
-				64E841E120A592E0003D3524 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +397,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = "Carthage Frameworks";
