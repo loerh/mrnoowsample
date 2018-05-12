@@ -56,4 +56,37 @@ extension ProductsTableView: UITableViewDataSource {
 
 extension ProductsTableView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let sectionHeaderView = Bundle.main.loadNibNamed(TableHeaderView.nibName, owner: self, options: nil)?.first as? TableHeaderView
+        sectionHeaderView?.sectionNameLabel?.text = getSectionName(for: section)
+        
+        return sectionHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return Bundle.main.loadNibNamed("TableFooterView", owner: self, options: nil)?.first as? UIView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 65
+    }
+    
+    /**
+     Gets the section name.
+     - parameter section: The section for which to get the name.
+     - returns: The section name.
+     */
+    private func getSectionName(for section: Int) -> String? {
+        switch section {
+        case 0:
+            return "SMOOTHIES"
+        default:
+            return nil
+        }
+    }
 }
