@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" estimatedRowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-WT-tkM" customClass="ProductsTableView" customModule="mrnoow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="175" width="375" height="492"/>
+                                <rect key="frame" x="0.0" y="199.5" width="375" height="467.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductTableViewCell" rowHeight="78" id="7Le-4N-Jay" customClass="ProductTableViewCell" customModule="mrnoow" customModuleProvider="target">
@@ -84,24 +84,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7P-iY-0gw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zuum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7P-iY-0gw">
                                 <rect key="frame" x="16" y="80" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aP-42-zrw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pasta - Pizza - €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aP-42-zrw">
                                 <rect key="frame" x="16" y="117" width="343" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR6-WW-Blg">
-                                <rect key="frame" x="16" y="150" width="343" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunes - Viernes: 08.00h a 20.00h Sabado - Domingo: 10.00h a 21.00h" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR6-WW-Blg">
+                                <rect key="frame" x="16" y="150" width="343" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xyw-lE-tR5">
+                                <rect key="frame" x="169.5" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -111,11 +115,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L7P-iY-0gw" secondAttribute="trailing" constant="16" id="LiH-AV-zpk"/>
                             <constraint firstItem="4aP-42-zrw" firstAttribute="top" secondItem="L7P-iY-0gw" secondAttribute="bottom" constant="16" id="N35-Ke-7ld"/>
                             <constraint firstItem="RR6-WW-Blg" firstAttribute="top" secondItem="4aP-42-zrw" secondAttribute="bottom" constant="16" id="PzS-P8-KfN"/>
-                            <constraint firstItem="JFJ-WT-tkM" firstAttribute="top" secondItem="RR6-WW-Blg" secondAttribute="bottom" constant="8" id="Qw9-Ap-RsO"/>
+                            <constraint firstItem="JFJ-WT-tkM" firstAttribute="top" secondItem="RR6-WW-Blg" secondAttribute="bottom" constant="16" id="Qw9-Ap-RsO"/>
                             <constraint firstItem="JFJ-WT-tkM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RZM-lQ-BS7"/>
                             <constraint firstItem="L7P-iY-0gw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SDk-Vc-9Sj"/>
                             <constraint firstItem="RR6-WW-Blg" firstAttribute="leading" secondItem="4aP-42-zrw" secondAttribute="leading" id="XPv-sb-ClE"/>
+                            <constraint firstItem="xyw-lE-tR5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fMz-8I-khy"/>
                             <constraint firstItem="L7P-iY-0gw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="gh6-F5-mdI"/>
+                            <constraint firstItem="xyw-lE-tR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h7i-ru-TdX"/>
                             <constraint firstItem="JFJ-WT-tkM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="px1-5n-pbb"/>
                             <constraint firstItem="JFJ-WT-tkM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v5D-St-K0h"/>
                         </constraints>
@@ -123,6 +129,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Zuum" id="Zhb-Xp-l69"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="xyw-lE-tR5" id="pkY-Ca-hbh"/>
                         <outlet property="productsTableView" destination="JFJ-WT-tkM" id="YwU-hz-tOM"/>
                     </connections>
                 </viewController>

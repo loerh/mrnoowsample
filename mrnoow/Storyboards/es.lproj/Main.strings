@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Pasta - Pizza - €"; ObjectID = "4aP-42-zrw"; */
+"4aP-42-zrw.text" = "Pasta - Pizza - €";
+
+/* Class = "UILabel"; text = "99,99 €"; ObjectID = "5ZB-LQ-h4v"; */
+"5ZB-LQ-h4v.text" = "99,99 €";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8Ve-wv-tnQ"; */
+"8Ve-wv-tnQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Zuum"; ObjectID = "L7P-iY-0gw"; */
+"L7P-iY-0gw.text" = "Zuum";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MMZ-pk-oAb"; */
+"MMZ-pk-oAb.text" = "Label";
+
+/* Class = "UILabel"; text = "Lunes - Viernes: 08.00h a 20.00h Sabado - Domingo: 10.00h a 21.00h"; ObjectID = "RR6-WW-Blg"; */
+"RR6-WW-Blg.text" = "Lunes - Viernes: 08.00h a 20.00h Sabado - Domingo: 10.00h a 21.00h";
+
+/* Class = "UINavigationItem"; title = "Zuum"; ObjectID = "Zhb-Xp-l69"; */
+"Zhb-Xp-l69.title" = "Zuum";

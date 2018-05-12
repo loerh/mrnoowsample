@@ -12,6 +12,8 @@ class ProductsViewController: UIViewController {
 
     @IBOutlet weak var productsTableView: ProductsTableView?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,10 +21,14 @@ class ProductsViewController: UIViewController {
     }
 
     private func loadData() {
+        
+        activityIndicator?.isHidden = false
+        activityIndicator?.startAnimating()
         let viewModel = ProductViewModel()
         viewModel.fetchProducts { (products) in
             if let products = products {
                 self.productsTableView?.setup(with: products)
+                self.activityIndicator?.stopAnimating()
             }
         }
     }
