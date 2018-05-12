@@ -14,8 +14,22 @@ import CoreData
  */
 class DBManager {
     
+    //MARK: Properties
+    
     /// The DBManager shared instance
     static let shared = DBManager()
+    
+    /// The managed context of CoreData
+    var managedObjectContext: NSManagedObjectContext? {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    //MARK: Fetch
     
     /**
      Fetches products from CoreData.
@@ -35,6 +49,8 @@ class DBManager {
         
         return products
     }
+    
+    //MARK: Save
     
     /**
      Saves a Product object to CoreData.
@@ -74,16 +90,6 @@ class DBManager {
             print(error)
         }
         
-    }
-    
-    /// The managed context of CoreData
-    var managedObjectContext: NSManagedObjectContext? {
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return nil
-        }
-        
-        return appDelegate.persistentContainer.viewContext
     }
     
     //MARK: Reusable Fetch
