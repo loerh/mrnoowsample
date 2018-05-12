@@ -36,7 +36,7 @@ class APIManager {
                         var products = [Product]()
                         var amount = 0
                         for result in results {
-                            /// Limit items amount to 20 for the sake of performance and exercise
+                            /// Limit items amount to 20 for the sake of performance and exercise. Pagination could be use to cope with that.
                             if amount > 20 {
                                 break
                             }
