@@ -14,7 +14,7 @@ import Foundation
 struct Constants {
     
     /// The API base URL
-    static let apiBaseURL = "http://http://views-dev.mrnoow.com/api/"
+    static let apiBaseURL = "http://views-dev.mrnoow.com/api/"
 }
 
 /// The completion type alias for Product requests
