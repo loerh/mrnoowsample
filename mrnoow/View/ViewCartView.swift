@@ -9,14 +9,11 @@
 import UIKit
 
 /**
- The view for the table header in sections.
+ The UIControl for the view cart.
  */
-class TableFooterView: UIView {
+class ViewCartView: RoundedView {
     
     //MARK: Properties
-    
-    /// The nib name
-    static let nibName = "TableFooterView"
     
     /// The section name label
     @IBOutlet weak var cartLabel: UILabel?
