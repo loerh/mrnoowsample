@@ -15,8 +15,8 @@ class ProductsTableView: UITableView {
     
     //MARK: Properties
     
-    /// The products displayed on the table view
-    private var products: [Product]?
+    /// The data displayed on the table view as a dictionary containing sections as key and list of corresponding products as value
+    private var data: [String: [Product]]?
     
     //MARK: Setup
     
@@ -27,8 +27,21 @@ class ProductsTableView: UITableView {
     func setup(with products: [Product]) {
         delegate = self
         dataSource = self
-        self.products = products
+        setupData(with: products)
         reloadData()
+    }
+    
+    private func setupData(with products: [Product]) {
+        var data = [String: [Product]]()
+        
+        for product in products {
+            if data[product.keyword] == nil {
+                data[product.keyword] = [Product]()
+            }
+            data[product.keyword]?.append(product)
+        }
+        
+        self.data = data
     }
 }
 
@@ -40,18 +53,30 @@ extension ProductsTableView: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let product = products?[indexPath.row] {
-            cell.configure(with: product)
+        if let data = data {
+        
+            let keys = Array(data.keys)
+            let section = keys[indexPath.section]
+            
+            if let product = data[section]?[indexPath.row] {
+                cell.configure(with: product)
+            }
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products?.count ?? 0
+        if let data = data {
+            let keys = Array(data.keys)
+            return data[keys[section]]?.count ?? 0
+        }
+        return 0
     }
     
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return data?.count ?? 0
+    }
 }
 
 extension ProductsTableView: UITableViewDelegate {
@@ -68,25 +93,15 @@ extension ProductsTableView: UITableViewDelegate {
         return 50
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return Bundle.main.loadNibNamed("TableFooterView", owner: self, options: nil)?.first as? UIView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 65
-    }
-    
     /**
      Gets the section name.
      - parameter section: The section for which to get the name.
      - returns: The section name.
      */
     private func getSectionName(for section: Int) -> String? {
-        switch section {
-        case 0:
-            return "SMOOTHIES"
-        default:
-            return nil
+        if let data = data {
+            return Array(data.keys)[section].uppercased()
         }
+        return nil
     }
 }

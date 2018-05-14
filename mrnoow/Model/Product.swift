@@ -30,14 +30,18 @@ struct Product {
     /// The price of that product
     let price: Float
     
+    /// List of key words
+    let keyword: String
+    
     /**
      A basic initialiser
      */
-    init(id: String, name: String, productDescription: String, price: Float) {
+    init(id: String, name: String, productDescription: String, price: Float, keyword: String) {
         self.id = id
         self.name = name
         self.productDescription = productDescription
         self.price = price
+        self.keyword = keyword
     }
     
     //MARK: JSON Parsing
@@ -69,7 +73,11 @@ struct Product {
             return nil
         }
         
-        return Product(id: id, name: name, productDescription: productDescription, price: price)
+        guard let keyword = json[ProductKey.keywords.rawValue].array?.first?.string else {
+            return nil
+        }
+        
+        return Product(id: id, name: name, productDescription: productDescription, price: price, keyword: keyword)
     }
     
     /**
@@ -81,12 +89,13 @@ struct Product {
         guard let id = managedObject.value(forKey: ProductDBKey.id.rawValue) as? String,
             let name = managedObject.value(forKey: ProductDBKey.name.rawValue) as? String,
             let productDescription = managedObject.value(forKey: ProductDBKey.description.rawValue) as? String,
-            let price = managedObject.value(forKey: ProductDBKey.price.rawValue) as? Float else {
+            let price = managedObject.value(forKey: ProductDBKey.price.rawValue) as? Float,
+        let keyword = managedObject.value(forKey: ProductDBKey.keyword.rawValue) as? String else {
                 return nil
         }
         
         /// Initialise
-        self.init(id: id, name: name, productDescription: productDescription, price: price)
+        self.init(id: id, name: name, productDescription: productDescription, price: price, keyword: keyword)
     }
 }
 
@@ -106,6 +115,9 @@ enum ProductKey: String {
     
     /// Total price
     case price = "total"
+    
+    /// Keywords
+    case keywords
 }
 
 enum ProductDBKey: String {
@@ -113,4 +125,5 @@ enum ProductDBKey: String {
     case name
     case description = "productDescription"
     case price = "totalPrice"
+    case keyword
 }

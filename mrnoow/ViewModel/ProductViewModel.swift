@@ -22,7 +22,7 @@ class ProductViewModel {
         completion(DBManager.shared.fetchProducts())
         
         /// Fetch from API
-        APIManager.shared.fetchProducts { (apiProducts) in
+        APIManager.shared.fetchProducts(byStoreID: "58d15ade9d4ffa000f7df597") { (apiProducts) in
             
             DispatchQueue.main.async {
                 

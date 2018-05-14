@@ -82,6 +82,7 @@ class DBManager {
         productMO.setValue(product.name, forKey: ProductDBKey.name.rawValue)
         productMO.setValue(product.price, forKey: ProductDBKey.price.rawValue)
         productMO.setValue(product.productDescription, forKey: ProductDBKey.description.rawValue)
+        productMO.setValue(product.keyword, forKey: ProductDBKey.keyword.rawValue)
         
         /// Save managed objects
         do {

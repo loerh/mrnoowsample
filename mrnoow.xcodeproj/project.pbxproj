@@ -10,10 +10,10 @@
 		6457A35120A72AD50019A9F1 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457A35020A72AD50019A9F1 /* TableHeaderView.swift */; };
 		6457A35320A72B470019A9F1 /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6457A35220A72B470019A9F1 /* TableHeaderView.xib */; };
 		6457A35520A72EAF0019A9F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457A35420A72EAF0019A9F1 /* Extensions.swift */; };
-		6457A35720A730CA0019A9F1 /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6457A35620A730CA0019A9F1 /* TableFooterView.xib */; };
 		6457A35A20A731E50019A9F1 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457A35920A731E50019A9F1 /* RoundedView.swift */; };
 		6457A35E20A734DB0019A9F1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6457A36020A734DB0019A9F1 /* Localizable.strings */; };
-		6457A36620A7366C0019A9F1 /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457A36520A7366C0019A9F1 /* TableFooterView.swift */; };
+		6457A36620A7366C0019A9F1 /* ViewCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457A36520A7366C0019A9F1 /* ViewCartView.swift */; };
+		64AE2AC620A9804200A61239 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E841DF20A592E0003D3524 /* Alamofire.framework */; };
 		64E841A920A5903E003D3524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841A820A5903E003D3524 /* AppDelegate.swift */; };
 		64E841AB20A5903E003D3524 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E841AA20A5903E003D3524 /* ProductsViewController.swift */; };
 		64E841AE20A5903E003D3524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E841AC20A5903E003D3524 /* Main.storyboard */; };
@@ -53,13 +53,12 @@
 		6457A35020A72AD50019A9F1 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		6457A35220A72B470019A9F1 /* TableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeaderView.xib; sourceTree = "<group>"; };
 		6457A35420A72EAF0019A9F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		6457A35620A730CA0019A9F1 /* TableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
 		6457A35920A731E50019A9F1 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		6457A36120A735490019A9F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6457A36220A735790019A9F1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		6457A36320A735790019A9F1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6457A36420A735790019A9F1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6457A36520A7366C0019A9F1 /* TableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFooterView.swift; sourceTree = "<group>"; };
+		6457A36520A7366C0019A9F1 /* ViewCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCartView.swift; sourceTree = "<group>"; };
 		64E841A520A5903E003D3524 /* mrnoow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mrnoow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E841A820A5903E003D3524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64E841AA20A5903E003D3524 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64E841E020A592E0003D3524 /* SwiftyJSON.framework in Frameworks */,
+				64AE2AC620A9804200A61239 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,6 @@
 				64E841AC20A5903E003D3524 /* Main.storyboard */,
 				64E841B420A5903E003D3524 /* LaunchScreen.storyboard */,
 				6457A35220A72B470019A9F1 /* TableHeaderView.xib */,
-				6457A35620A730CA0019A9F1 /* TableFooterView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -230,7 +229,7 @@
 				64E841F120A63058003D3524 /* ProductsTableView.swift */,
 				6457A35020A72AD50019A9F1 /* TableHeaderView.swift */,
 				6457A35920A731E50019A9F1 /* RoundedView.swift */,
-				6457A36520A7366C0019A9F1 /* TableFooterView.swift */,
+				6457A36520A7366C0019A9F1 /* ViewCartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,7 +368,6 @@
 				6457A35E20A734DB0019A9F1 /* Localizable.strings in Resources */,
 				64E841B620A5903E003D3524 /* LaunchScreen.storyboard in Resources */,
 				64E841B320A5903E003D3524 /* Assets.xcassets in Resources */,
-				6457A35720A730CA0019A9F1 /* TableFooterView.xib in Resources */,
 				64E841AE20A5903E003D3524 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +396,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = "Carthage Frameworks";
 			outputPaths = (
@@ -421,7 +420,7 @@
 				6457A35120A72AD50019A9F1 /* TableHeaderView.swift in Sources */,
 				64E841F020A62981003D3524 /* DBManager.swift in Sources */,
 				6457A35A20A731E50019A9F1 /* RoundedView.swift in Sources */,
-				6457A36620A7366C0019A9F1 /* TableFooterView.swift in Sources */,
+				6457A36620A7366C0019A9F1 /* ViewCartView.swift in Sources */,
 				6457A35520A72EAF0019A9F1 /* Extensions.swift in Sources */,
 				64E841B120A5903E003D3524 /* mrnoow.xcdatamodeld in Sources */,
 				64E841A920A5903E003D3524 /* AppDelegate.swift in Sources */,
